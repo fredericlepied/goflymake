@@ -33,7 +33,7 @@ the following items:
 
  2. Install goflymake:
 
-    `go get -u github.com/dougm/goflymake`
+    `go install github.com/fredericlepied/goflymake@latest`
 
 ### Emacs setup
 
@@ -43,12 +43,12 @@ the following items:
 
    * **flymake**
 
-            (add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
+            (add-to-list 'load-path "~/go/pkg/mod/github.com/fredericlepied/goflymake@v0.0.0-<date+sha1>")
             (require 'go-flymake)
 
    * **flycheck**
 
-            (add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
+            (add-to-list 'load-path "~/go/pkg/mod/github.com/fredericlepied/goflymake@v0.0.0-<date+sha1>")
             (require 'go-flycheck)
 
 
