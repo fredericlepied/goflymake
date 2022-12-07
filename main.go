@@ -19,7 +19,7 @@ var (
 	prefix = flag.String("prefix", "flymake_", "The prefix for generated Flymake artifacts.")
 	debug  = flag.Bool("debug", false, "Enable extra diagnostic output to determine why errors are occurring.")
 
-	testArguments  = []string{"test", "-c"}
+	testArguments  = []string{"test", "-c", "-o", "/dev/null"}
 	buildArguments = []string{"build", "-o", "/dev/null"}
 )
 
@@ -44,7 +44,6 @@ func main() {
 
 	if strings.HasSuffix(orig, testSuffix) {
 		isTest = true
-		// shame there is no '-o' option
 		goArguments = append(goArguments, testArguments...)
 	} else {
 		goArguments = append(goArguments, buildArguments...)
